@@ -1,0 +1,381 @@
+/* CSS Variables for Themes (Light / Dark) */
+:root {
+    --bg-color: #fafafa;
+    --nav-bg: #ffffff;
+    --text-main: #333333;
+    --text-muted: #555555;
+    --heading-color: #111111;
+    --card-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --input-border: #dddddd;
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+    --footer-bg: #111111;
+}
+
+/* Dark Theme Variables */
+.dark-theme {
+    --bg-color: #121212;
+    --nav-bg: #1e1e1e;
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --heading-color: #ffffff;
+    --card-bg: #242424;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --input-border: #333333;
+    --footer-bg: #0a0a0a;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--nav-bg);
+    box-shadow: 0 2px 5px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.4s ease;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Dark Mode Button */
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.theme-btn:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Section Shared Styles */
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--heading-color);
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+}
+
+/* About Section */
+.about p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+/* Skills Section Styling */
+.skills {
+    padding: 80px 10%;
+    background-color: var(--bg-color);
+    text-align: center;
+    transition: background-color 0.4s ease;
+}
+
+.skills .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background-color: var(--card-bg);
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px); 
+}
+
+.skill-card:hover span {
+    color: var(--primary-color); 
+}
+
+.skill-card img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover img {
+    transform: scale(1.1);
+}
+
+.skill-card span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    transition: color 0.3s ease;
+}
+/* Work/Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    text-align: center;
+    overflow: hidden; /* ছবি যেন কার্ডের রাউন্ডেড কর্নার থেকে বের না হয় */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* হোভার করলে কার্ড হালকা উপরে উঠবে */
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+/* প্রোজেক্ট ইমেজের স্টাইল */
+.project-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* ছবি যেন কেটে বা চ্যাপ্টা না হয় */
+}
+
+/* কার্ডের ভেতরের লেখার অংশের স্টাইল */
+.project-content {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* সব কার্ডের সাইজ সমান রাখতে সাহায্য করবে */
+}
+
+.project-content h3 {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    color: var(--heading-color);
+}
+
+.tech-stack {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; /* বাটনটিকে সবসময় নিচে ঠেলে রাখবে */
+}
+
+/* View Project বাটন (ছবির মত) */
+.btn-small {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.btn-small:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Contact Section */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.contact input, .contact textarea {
+    padding: 15px;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--footer-bg);
+    color: #fff;
+    transition: background-color 0.4s ease;
+}
+
+/* --- Animations --- */
+
+/* Typing Effect Cursor */
+.typewriter {
+    color: var(--heading-color);
+    border-right: 3px solid var(--primary-color);
+    padding-right: 5px;
+    animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: var(--primary-color); }
+}
+
+/* Page Load Animation for Hero Content */
+.hero-content h1 {
+    animation: slideInUp 1s ease-out;
+}
+
+.hero-content .btn, .hero-content .social-links {
+    opacity: 0;
+    animation: slideInUp 1s ease-out 0.5s forwards;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
