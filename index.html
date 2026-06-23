@@ -20,16 +20,18 @@
             <li><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
         </ul>
     </nav>
-<section id="home" class="hero">
+
+    <section id="home" class="hero">
         <div class="hero-content">
             <h1>Hi,<br>I'm <span class="highlight">Jihadul Islam Rifat</span><br><span class="typewriter"></span></h1>
             
+            <!-- নিজের সঠিক রোল/ব্যাচ অনুযায়ী এই ফাইলের পাথ ও নাম আপডেট করে নেবেন -->
             <a href="./assets/images/cv/Name_Rifat_Batch_79_roll_10.pdf" download class="btn">Download CV</a>
             
             <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/YOUR_USERNAME" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
         <div class="hero-image">
@@ -43,7 +45,9 @@
             I am a passionate Full-Stack Developer based in Dhaka, Bangladesh, currently completing my studies at Dhaka International University. I specialize in building dynamic, responsive web applications and robust backend systems. My core stack includes Python, Django, JavaScript, and Tailwind CSS, supported by strong database management skills using MySQL and REST API design. With a solid foundation in C and C++, I enjoy tackling complex technical challenges.
         </p>
     </section>
-<section id="work is gone" class="work">
+
+    <!-- আইডি ঠিক করা হয়েছে (work is gone পরিবর্তন করে work করা হয়েছে) -->
+    <section id="work" class="work">
         <h2 class="section-title">My Work</h2>
         <div class="project-grid">
             
@@ -51,8 +55,10 @@
                 <img src="./assets/images/work/download.png" alt="School Management System" class="project-img">
                 <div class="project-content">
                     <h3>School Management System</h3>
-                    <p class="tech-stack">Tech stack : Python, Django, MySQL</p>
-                    <a href="https://github.com/আপনার-গিটহাব-ইউজারনেম/school-management" target="_blank" class="btn-small">View Project</a>
+                    <p class="tech-stack">Tech stack: Python, Django, MySQL</p>
+                    <div class="project-btns">
+                        <a href="https://github.com/YOUR_USERNAME/school-management" target="_blank" class="btn-small">GitHub</a>
+                    </div>
                 </div>
             </div>
 
@@ -60,8 +66,10 @@
                 <img src="./assets/images/work/image.png" alt="ShoeKart E-Commerce" class="project-img">
                 <div class="project-content">
                     <h3>ShoeKart E-Commerce</h3>
-                    <p class="tech-stack">Tech stack : JavaScript, HTML, CSS</p>
-                    <a href="#" target="_blank" class="btn-small">View Project</a>
+                    <p class="tech-stack">Tech stack: JavaScript, HTML, CSS</p>
+                    <div class="project-btns">
+                        <a href="https://github.com/YOUR_USERNAME/shoekart" target="_blank" class="btn-small">GitHub</a>
+                    </div>
                 </div>
             </div>
 
@@ -69,8 +77,10 @@
                 <img src="./assets/images/work/download.jpeg" alt="Interactive 3D Graphics" class="project-img">
                 <div class="project-content">
                     <h3>Interactive 3D Graphics</h3>
-                    <p class="tech-stack">Tech stack : C/C++, OpenGL</p>
-                    <a href="https://github.com/আপনার-গিটহাব-ইউজারনেম/3d-graphics" target="_blank" class="btn-small">View Project</a>
+                    <p class="tech-stack">Tech stack: C/C++, OpenGL</p>
+                    <div class="project-btns">
+                        <a href="https://github.com/YOUR_USERNAME/3d-graphics" target="_blank" class="btn-small">GitHub</a>
+                    </div>
                 </div>
             </div>
 
@@ -89,6 +99,10 @@
                 <span>Django</span>
             </div>
             <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="REST API">
+                <span>REST API</span>
+            </div>
+            <div class="skill-card">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript">
                 <span>JavaScript</span>
             </div>
@@ -103,6 +117,15 @@
             <div class="skill-card">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C/C++">
                 <span>C / C++</span>
+            </div>
+            
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+                <span>Git</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub">
+                <span>GitHub</span>
             </div>
         </div>
     </section>
@@ -122,21 +145,17 @@
     </footer>
 
     <script>
-        // --- Dark Mode Logic ---
+        // আপনার জাভাস্ক্রিপ্ট কোডটি এখানে হুবহু থাকবে...
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeIcon = themeToggleBtn.querySelector('i');
-
-        // Check Local Storage for Theme
         const savedTheme = localStorage.getItem('portfolio-theme');
         if (savedTheme === 'dark') {
             document.body.classList.add('dark-theme');
             themeIcon.classList.remove('fa-moon');
             themeIcon.classList.add('fa-sun');
         }
-
         themeToggleBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark-theme');
-            
             if (document.body.classList.contains('dark-theme')) {
                 themeIcon.classList.remove('fa-moon');
                 themeIcon.classList.add('fa-sun');
@@ -147,8 +166,6 @@
                 localStorage.setItem('portfolio-theme', 'light');
             }
         });
-
-        // --- Smooth Scrolling ---
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -157,15 +174,11 @@
                 });
             });
         });
-
-        // --- Contact Form Alert ---
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for your message! I will get back to you soon.');
             this.reset();
         });
-
-        // --- Dynamic Typing Effect Logic ---
         const textArray = ["Full-Stack Developer", "Django Framework Expert", "C & C++ Programmer"];
         let textIndex = 0;
         let charIndex = 0;
@@ -173,7 +186,6 @@
         const erasingSpeed = 50;
         const newTextDelay = 2000;
         const typedTextSpan = document.querySelector(".typewriter");
-
         function type() {
             if (charIndex < textArray[textIndex].length) {
                 typedTextSpan.textContent += textArray[textIndex].charAt(charIndex);
@@ -183,7 +195,6 @@
                 setTimeout(erase, newTextDelay);
             }
         }
-
         function erase() {
             if (charIndex > 0) {
                 typedTextSpan.textContent = textArray[textIndex].substring(0, charIndex - 1);
@@ -195,12 +206,9 @@
                 setTimeout(type, typingSpeed + 500);
             }
         }
-
         document.addEventListener("DOMContentLoaded", function() {
             if (textArray.length) setTimeout(type, newTextDelay + 250);
         });
     </script>
-
 </body>
 </html>
-
